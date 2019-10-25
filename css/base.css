@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+
+html { font-size: 62.5%; }
+
+body { font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic ProN", -apple-system, BlinkMacSystemFont, Meiryo, sans-serif; font-size: calc(16 / 750 * 100vw); font-weight: 300; line-height: 1.5; color: #333; -webkit-text-size-adjust: 100%; position: relative; }
+
+h1 { font-size: calc(36 / 750 * 100vw); line-height: 1; text-align: center; }
+
+h2 { font-size: calc(32 / 750 * 100vw); line-height: 1; text-align: left; }
+
+h3 { font-size: calc(28 / 750 * 100vw); line-height: 1; text-align: left; }
+
+a { color: #c00; text-decoration: none; }
+
+p { margin: 0; }
+
+img { width: 100%; height: auto; vertical-align: bottom; }
+
+@media screen and (min-width: 768px) { body { font-size: 1.6rem; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.4rem; }
+  h3 { font-size: 2rem; } }
+/*-------------------------------------------------
+	main
+--------------------------------------------------*/
+.cont { max-width: 960px; }
+
+/*# sourceMappingURL=base.css.map */

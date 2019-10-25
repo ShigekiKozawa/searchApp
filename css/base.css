@@ -23,6 +23,6 @@ img { width: 100%; height: auto; vertical-align: bottom; }
 /*-------------------------------------------------
 	main
 --------------------------------------------------*/
-.cont { max-width: 960px; }
+.cont { margin: 0 auto; max-width: 960px; }
 
 /*# sourceMappingURL=base.css.map */

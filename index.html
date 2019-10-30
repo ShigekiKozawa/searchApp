@@ -3,17 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ニュース検索アプリ</title>
+	<title>ニュース検索まとめ</title>
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
 </head>
 <body>
-	<h1>ニュース検索アプリ</h1>
-	<div class="cont">
-		<div>
-			<input type="text" name="search">
+	<h1>ニュース検索まとめ</h1>
+    <div class="container" id="app">
+      	<h3 class="text-center">VueNews</h3> 
+		<div class="columns medium-3" v-for="result in results">
+		  <div class="card">
+		    <div class="card-divider">
+		      {{ result.title }}
+		    </div>
+		    <div class="card-section">
+		      <p>{{ result.abstract }}.</p>
+		    </div>
+		  </div>
 		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+		<ul>
+		  <li v-for="article in articles">{{ article }}</li>
+		</ul>
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="./js/vue.js"></script>
 </body>
 </html>

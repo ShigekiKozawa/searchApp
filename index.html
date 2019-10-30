@@ -5,28 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ニュース検索まとめ</title>
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
 </head>
 <body>
-	<h1>ニュース検索まとめ</h1>
+	<h1>ニュースまとめ</h1>
     <div class="container" id="app">
-      	<h3 class="text-center">VueNews</h3> 
-		<div class="columns medium-3" v-for="result in results">
-		  <div class="card">
-		    <div class="card-divider">
-		      {{ result.title }}
-		    </div>
-		    <div class="card-section">
-		      <p>{{ result.abstract }}.</p>
-		    </div>
-		  </div>
-		</div>
-		<ul>
-		  <li v-for="article in articles">{{ article }}</li>
+		<ul class="news__wrap">
+		  <li class="news__list" v-for="result in results">
+		  	<a :href="result.url">
+				<p class="news__block-img"><img :src="result.urlToImage"></p>
+				<div class="news__block-txt">
+					<h2 class="news__ttl">{{ result.title }}</h2>
+				</div>
+		  	</a>
+		  </li>
 		</ul>
     </div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/vue.js"></script>
 </body>
 </html>

@@ -2,7 +2,11 @@
 
 html { font-size: 62.5%; }
 
-body { font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic ProN", -apple-system, BlinkMacSystemFont, Meiryo, sans-serif; font-size: calc(16 / 750 * 100vw); font-weight: 300; line-height: 1.5; color: #333; -webkit-text-size-adjust: 100%; position: relative; }
+body { padding: 2em 0; font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic ProN", -apple-system, BlinkMacSystemFont, Meiryo, sans-serif; font-size: calc(16 / 750 * 100vw); font-weight: 300; line-height: 1.5; color: #333; -webkit-text-size-adjust: 100%; position: relative; }
+
+ul, li { margin: 0; padding: 0; list-style-type: none; }
+
+h1, h2, h3 { margin: 0; }
 
 h1 { font-size: calc(36 / 750 * 100vw); line-height: 1; text-align: center; }
 
@@ -10,21 +14,28 @@ h2 { font-size: calc(32 / 750 * 100vw); line-height: 1; text-align: left; }
 
 h3 { font-size: calc(28 / 750 * 100vw); line-height: 1; text-align: left; }
 
-a { color: #c00; text-decoration: none; }
+a { color: #fff; text-decoration: none; display: inline-block; }
 
 p { margin: 0; }
 
 img { width: 100%; height: auto; vertical-align: bottom; }
 
 @media screen and (min-width: 768px) { body { font-size: 1.6rem; }
-  h1 { font-size: 2.8rem; }
+  h1 { margin-bottom: 30px; font-size: 3.6rem; }
   h2 { font-size: 2.4rem; }
-  h3 { font-size: 2rem; } }
+  h3 { font-size: 2rem; }
+  a { font-size: 1.2rem; } }
 /*-------------------------------------------------
 	main
 --------------------------------------------------*/
-.cont { margin: 0 auto; max-width: 960px; text-align: center; position: relative; }
-
-input[type="search"] { max-width: 500px; width: 100%; height: 80px; line-height: 80px; }
+.news__wrap { margin: 0 auto; max-width: 960px; display: flex; flex-wrap: wrap; position: relative; }
+.news__list { margin-right: 30px; margin-bottom: 30px; width: 300px; }
+.news__list:nth-of-type(3n) { margin-right: 0; }
+.news__list a { width: 100%; box-shadow: 0 0 15px 0 #ccc; -webkit-backface-visibility: hidden; backface-visibility: hidden; transition: transform .2s ease-in-out; filter: alpha(opacity=100); opacity: 1; }
+.news__list a:hover { transform: scale(1.02); }
+.news__block-img { height: 200px; overflow: hidden; position: relative; }
+.news__block-img img { width: auto; height: 200px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.news__block-txt { padding: 1em 2em; height: 100px; background: #6b5e53; }
+.news__ttl { font-size: 1.4rem; font-weight: 400; line-height: 1.5; }
 
 /*# sourceMappingURL=base.css.map */

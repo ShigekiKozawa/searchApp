@@ -20,6 +20,9 @@ ul, li {
 	padding: 0;
 	list-style-type: none;
 }
+select {
+	text-transform: capitalize;
+}
 h1, h2, h3 {
 	margin: 0;
 }
@@ -72,31 +75,84 @@ img{
 /*-------------------------------------------------
 	main
 --------------------------------------------------*/
+.category {
+	&__wrap {
+		margin: 0 auto; margin-bottom: 30px;
+		padding: 20px 40px;
+		display: flex;
+		justify-content: center;
+	}
+	&__inner {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		select {
+			padding: .8em 2em;
+			width: 150px; height: 40px;
+			font-size: 1.2rem; font-weight: 500;
+			line-height: 20px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0px;
+			background: url(../img/arrow-select.svg) right 10px top 14px /contain no-repeat;
+			background-size: 20px 10px;
+			cursor: pointer;
+		}
+		.button {
+			padding: .8em 2em;
+			width: 100px; height: 40px;
+			font-size: 1.2rem; font-weight: 400;
+			line-height: 20px;
+			text-align: center;
+			background: #05b1d0;
+			cursor: pointer;
+		}
+	}
+}
 .news {
 	&__wrap {
 		margin: 0 auto;
 		max-width: 960px;
 		display: flex;
 		flex-wrap: wrap;
-		position: relative;	
+		position: relative;
+		@media screen and (max-width: 1024px) {
+			max-width: 630px;
+		}
+		@media screen and(max-width: 767px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	&__list {
 		margin-right: 30px; margin-bottom: 30px;
 		width: 300px;
-		&:nth-of-type(3n) {
-			margin-right: 0;
-		}
 		a {
 			width: 100%;
 			box-shadow: 0 0 15px 0 #ccc;
 			-webkit-backface-visibility: hidden;
     		backface-visibility: hidden;
-			transition: transform .2s ease-in-out;
+			transition: transform .3s ease-in-out;
 			filter: alpha(opacity=100);
 			opacity: 1;
 			&:hover {
 				transform: scale(1.02);
 			}
+		}
+		@media screen and (min-width: 1025px) {
+			&:nth-of-type(3n) {
+				margin-right: 0;
+			}
+		}
+		@media screen and(max-width: 1024px) {
+			&:nth-of-type(2n) {
+				margin-right: 0;
+			}
+		}
+		@media screen and(max-width: 767px) {
+			margin-right: 0;
 		}
 	}
 	&__block {
@@ -115,13 +171,14 @@ img{
 			}
 		}
 		&-txt {
-			padding: 1em 2em;
-			height: 100px;
-			background: #6b5e53;
+			padding: 1em;
+			height: 114px;
+			height: calc(90px + 2em);
+			background: #03b1d0;
 		}
 	}
 	&__ttl {
-		font-size: 1.4rem; font-weight: 400;
+		font-size: 1.2rem; font-weight: 400;
 		line-height: 1.5;
 		//visibility: hidden;
 	}

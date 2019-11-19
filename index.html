@@ -14,8 +14,7 @@
 				<div class="category__wrap">
 					<div class="category__inner">
 						<select v-model="section">
-							<option v-for="section in sections" :value="section">{{ section }}</option>
-							<span></span>
+							<option v-for="section in sections" v-bind:value="section.value">{{ section.name }}</option>
 						</select>
 					</div>
 					<div class="category__inner">
@@ -39,6 +38,8 @@
     </div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.inview.min.js"></script>
 	<script type="text/javascript" src="./js/vue.js"></script>
 </body>
 </html>

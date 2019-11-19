@@ -54,6 +54,9 @@ img{
 	height: auto;
 	vertical-align: bottom;
 }
+.taC {
+	text-align: center;
+}
 @include media(pc) {
 	body {
 		font-size: 1.6rem;

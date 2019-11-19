@@ -36,7 +36,8 @@ const vm = new Vue({
             },
         ],
         section: 'general',
-        sectionName: '全て表示'
+        sectionName: '全て表示',
+        loading: true
     },
     mounted :function(){
         this.getPosts('general');
